@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package security;
+option go_package = "github.com/twingdev/go-twing/core/securitypb";
+
+message Key {
+  string address = 1;
+  string public = 2;
+  KeyTypes type = 3;
+}
+
+enum KeyTypes {
+  ECDSA = 0;
+  KYBER = 1;
+  DILITHIUM = 2;
+  FALCON = 3;
+}
